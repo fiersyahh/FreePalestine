@@ -33,11 +33,18 @@
     </div>
 
     <!-- README.md Content -->
-    <div style="margin-top: 50px; text-align: left; padding: 20px;">
-        <h2>README.md</h2>
-        <p># Free Palestine</p>
-        <p>Together for justice and peace.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Palestine.svg/1280px-Flag_of_Palestine.svg.png" alt="Palestine Flag">
-    </div>
+    <div id="readmeContent" style="margin-top: 50px; text-align: left; padding: 20px;"></div>
+
+    <script>
+        // Fetching and displaying README content dynamically
+        fetch('README.md')
+            .then(response => response.text())
+            .then(text => {
+                document.getElementById('readmeContent').innerHTML = text;
+            })
+            .catch(error => {
+                console.error('Error fetching README.md:', error);
+            });
+    </script>
 </body>
 </html>
