@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manajemen Tugas</title>
+<style>
+    /* CSS untuk styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    form {
+        margin-bottom: 20px;
+    }
+    input[type="text"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<h2>Manajemen Tugas</h2>
+
+<!-- Form untuk membuat tugas baru -->
+<form id="formTask">
+    <label for="title">Judul:</label><br>
+    <input type="text" id="title" name="title" required><br>
+    <label for="description">Deskripsi:</label><br>
+    <textarea id="description" name="description" rows="4" required></textarea><br>
+    <label for="dueDate">Tenggat Waktu:</label><br>
+    <input type="date" id="dueDate" name="dueDate" required><br>
+    <input type="submit" value="Tambah Tugas">
+</form>
+
+<!-- Tabel untuk menampilkan daftar tugas -->
+<table id="taskTable">
+    <thead>
+        <tr>
+            <th>Judul</th>
+            <th>Deskripsi</th>
+            <th>Tenggat Waktu</th>
+            <th>Status</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Daftar tugas akan ditampilkan di sini -->
+    </tbody>
+</table>
+
+<script>
+    // Simulasi data tugas
+    let tasks = [
+        { title: "Buat Proyek Manajemen Tugas", description: "Membuat aplikasi manajemen tugas menggunakan HTML, CSS, dan JavaScript.", dueDate: "2024-03-30", completed: false },
+        { title: "Belajar JavaScript", description: "Studi JavaScript untuk pengembangan web.", dueDate: "2024-04-05", completed: false }
+    ];
+
+    // Fungsi untuk menampilkan tugas di tabel
+    function renderTasks() {
+        const tableBody = document.querySelector("#taskTable tbody");
+        tableBody.innerHTML = "";
+        tasks.forEach((task, index) => {
+            const row = `
+                <tr>
+                    <td>${task.title}</td>
+                    <td>${task.description}</td>
+                    <td>${task.dueDate}</td>
+                    <td>${task.completed ? 'Selesai' : 'Belum Selesai'}</td>
+                    <td><button onclick="editTask(${index})">Edit</button> <button onclick="deleteTask(${index})">Hapus</button></td>
+                </tr>
+            `;
+            tableBody.innerHTML += row;
+        });
+    }
+
+    // Fungsi untuk menambahkan tugas baru
+    document.querySelector("#formTask").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const title = document.querySelector("#title").value;
+        const description = document.querySelector("#description").value;
+        const dueDate = document.querySelector("#dueDate").value;
+        tasks.push({ title, description, dueDate, completed: false });
+        renderTasks();
+        // Reset form
+        document.querySelector("#formTask").reset();
+    });
+
+    // Fungsi untuk mengedit tugas
+    function editTask(index) {
+        const updatedTitle = prompt("Masukkan judul baru:");
+        const updatedDescription = prompt("Masukkan deskripsi baru:");
+        const updatedDueDate = prompt("Masukkan tenggat waktu baru (YYYY-MM-DD):");
+        tasks[index].title = updatedTitle;
+        tasks[index].description = updatedDescription;
+        tasks[index].dueDate = updatedDueDate;
+        renderTasks();
+    }
+
+    // Fungsi untuk menghapus tugas
+    function deleteTask(index) {
+        if (confirm("Apakah Anda yakin ingin menghapus tugas ini?")) {
+            tasks.splice(index, 1);
+            renderTasks();
+        }
+    }
+
+    // Memanggil fungsi renderTasks untuk menampilkan tugas saat halaman dimuat
+    renderTasks();
+</script>
+
+</body>
+</html>
