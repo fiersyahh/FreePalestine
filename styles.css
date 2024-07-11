@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* 
+{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background: white;
+
+}
+ 
+.container{
+	display: flex;
+	justify-content: space-between;
+	align-items: right;
+}
+
+.container a img {
+  width: 200px; 
+  height: 70px; 
+  padding: 10px;
+}
+
+.navbar{
+	background: white;
+	margin: 0;
+	padding: 20px 30px;
+  padding-left: 0;
+}
+
+h1 {
+  font:bold;
+  font-size:40px;
+}
+
+h1 img {
+  float:left; 
+  padding:0px 100px 0px 300px;
+  width: 700px;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 100px;
+}
+ 
+ 
+.tombol{
+	display: none;
+	color: white;
+	font-size: 14pt;			
+}
+ 
+.tombol:hover{
+	cursor: pointer;
+}
+ 
+
+.search-box {
+  display: flex;
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 40px; 
+  margin-bottom: 40px;
+  padding-right: 70px;
+}
+
+.search-box .search-icon{
+  font-size: 1.18rem;
+  color: black;
+  padding-right: 10px;
+}
+
+.search-box .search-input{
+  transition: 0.5s;
+  width: 0px;
+  overflow: hidden;
+}
+
+.search-input .input{
+  border: none;
+  outline: none;
+  background-color: unset;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.search-box:hover .search-input{
+  width: 200px;
+  margin-left: 8px;
+}
+
+.login-button {
+  display: flex;
+  padding: 10px 60px 16px 0px;
+  position:absolute;
+  right: 1%;
+  font-size: 1.18rem;
+}
+
+.login-button a .fa-solid fa-user {
+  background-color: black;
+}
+
+.button1{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.grid {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content:space-between;
+  gap: 10px;
+  padding: 10px;
+  margin: 50px 200px 0px 200px;
+}
+
+.member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.tips img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.cerita img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  
+}
+
+.member a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tips a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.cerita a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
