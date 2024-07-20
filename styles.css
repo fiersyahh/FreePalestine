@@ -44,22 +44,10 @@ h1 img {
   width: 700px;
 }
 
-h2 {
-  text-align: center;
-  padding-top: 100px;
+a {
+  text-decoration: none;
+  color: black;
 }
- 
- 
-.tombol{
-	display: none;
-	color: white;
-	font-size: 14pt;			
-}
- 
-.tombol:hover{
-	cursor: pointer;
-}
- 
 
 .search-box {
   display: flex;
@@ -121,68 +109,7 @@ h2 {
   border-radius: 12px;
 }
 
-.grid {
-  display: flex;
-  text-align: center;
-  flex-direction: row;
-  justify-content:space-between;
-  gap: 10px;
-  padding: 10px;
-  margin: 50px 200px 0px 200px;
-}
 
-.member img {
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  display:flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-}
-.tips img {
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  display:flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-
-}
-
-.cerita img {
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  display:flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-
-  
-}
-
-.member a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.tips a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.cerita a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-}
 
 
 

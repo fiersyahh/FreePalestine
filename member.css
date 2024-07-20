@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* 
+{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+	margin-top: 50;
+	font-family: Arial, sans-serif;
+	background: white;
+  text-align: center;
+}
+ 
+.container{
+	display: flex;
+	justify-content: space-between;
+	align-items: right;
+}
+
+.container a img {
+  width: 200px; 
+  height: 70px; 
+  padding: 10px;
+}
+
+.navbar{
+	background: white;
+	margin: 0;
+	padding: 20px 30px;
+  padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .search-box {
+    display: flex;
+    background-color: white;
+    padding: 8px 16px;
+    border-radius: 40px; 
+    margin-bottom: 40px;
+    padding-right: 70px;
+  }
+  
+  .search-box .search-icon{
+    font-size: 1.18rem;
+    color: black;
+    padding-right: 10px;
+  }
+  
+  .search-box .search-input{
+    transition: 0.5s;
+    width: 0px;
+    overflow: hidden;
+  }
+  
+  .search-input .input{
+    border: none;
+    outline: none;
+    background-color: unset;
+    padding: 8px;
+    font-weight: bold;
+  }
+  
+  .search-box:hover .search-input{
+    width: 200px;
+    margin-left: 8px;
+  }
+  
+  .login-button {
+    display: flex;
+    padding: 10px 60px 16px 0px;
+    position:absolute;
+    right: 1%;
+    font-size: 1.18rem;
+  }
+  
+  .login-button a .fa-solid fa-user {
+    background-color: black;
+  }
+.wrapper {
+    background-color: #e6e6fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 300px 0 300px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin: 0 200px 15px 200px;
+}
+.form-group input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.buttons .gajadi {
+    background-color: #8bc34a;
+    color: white;
+}
+.buttons .daftar {
+    background-color: #03a9f4;
+    color: white;
+}
