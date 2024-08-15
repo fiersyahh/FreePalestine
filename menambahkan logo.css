@@ -1,0 +1,14 @@
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .social-icons img {
+    width: 30px; /* Ukuran logo */
+    height: auto;
+    transition: transform 0.3s ease; /* Animasi saat hover */
+  }
+  
+  .social-icons img:hover {
+    transform: scale(1.1); /* Efek perbesaran saat dihover */
+  }  
